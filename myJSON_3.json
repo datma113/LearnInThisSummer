@@ -1,0 +1,34 @@
+[
+    {
+        "name" : "Nguyen Cong Thanh Dat",
+        "age" : 20,
+        "faculty" : "IT",
+        "field" : "software engineering",
+        "class" : "DHKTPM14",
+        "graduated" : false
+    },
+    {
+        "name" : "Tran Anh Tuan",
+        "age" : 21,
+        "faculty" : "IT",
+        "field" : "Information Technology",
+        "class" : "DHCNTT14A",
+        "graduated" : false
+    },
+    {
+        "name" : "Mai Kien Cuong",
+        "age" : 20,
+        "faculty" : "IT",
+        "field" : "Software engineering",
+        "class" : "DHKTPM14",
+        "graduated" : false
+    },
+    {
+        "name" : "Truong Cong Cuong",
+        "age" : 20,
+        "faculty" : "IT",
+        "field" : "Software engineering",
+        "class" : "DHKTPM14",
+        "graduated" : false
+    }
+]
