@@ -4,7 +4,8 @@ let aPromise = new Promise((resolve, reject) => {
   // reject(` reject`);
 });
 
-aPromise.then(
+aPromise
+.then(
   (msg) => {
     setTimeout( () => {
         console.log(`\n\nthis is msg from resolve: ${msg}`);
