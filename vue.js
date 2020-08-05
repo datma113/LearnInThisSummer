@@ -28,4 +28,51 @@ let demo2 = new Vue({
     }
 });
 
+let demo3 = new Vue({
+    el: "#demo-vue-3",
+    data:{
+        str: "hello vue",
+        number: 1
+    },
+    computed:{
+        reverseStr: function() {
+           console.log(`computed: ${this.str.split("").reverse().join("")}`) ;
+            return this.str.split("").reverse().join("");
+        },
+        involved: function() {
+            console.log(`computed involved: ${this.number} `);
+            return this.number;
+        }
+    }, 
+    methods: {
+        reverseMethods: function() {
+            console.log(`methods${this.number} : ${this.str.split("").reverse().join("")}`);              
+            return `${this.number}  ${this.str.split("").reverse().join("")}`;
+        },
+        testMethods: function() {
+            console.log(` this is testing`);
+        },
+        increaseNumber: function() {
+            return this.number++;
+        }
+    }
+});
 
+
+let demo4 = new Vue({
+    el: '#demo-vue-4',
+    data:{
+        isActive: false,
+        hasError: true     
+    },
+    methods: {
+        changeText: function() {
+            return this.hasError ? this.hasError = false : this.hasError = true;
+        },
+        changeText2: function() {
+            return {
+                'text-danger' : this.hasError
+            }
+        }
+    }
+});

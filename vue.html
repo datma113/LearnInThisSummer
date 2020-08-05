@@ -11,22 +11,43 @@
 
 <body class="container" style="font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;">
     <div id="demo-vue">message: {{ msg }} I am {{ owner }} </div>
-   <br>
-   <!-------->
+    <br>
+    <!-------->
     <div id="demo-vue-1">
         <p>Using mustaches: {{ rawHtml }}</p>
         <p>Using v-html directive: <span v-html="rawHtml"></span></p>
     </div>
-   <!-------->
+    <hr>
+    <!-------->
     <br>
-   <div id="demo-vue-2">
+    <div id="demo-vue-2">
         <a v-bind:href="link">go to</a>
         <button class="btn btn-danger" v-bind:disabled="isWhat">click</button>
         <br>
         <p>init String: {{name}} </p>
         <p>using JS Express: {{ name.split("").reverse().join("") }} </p>
-   </div>
+
+    </div>
+    <hr>
+    <!-------->
+    <div id="demo-vue-3">
+        <button v-on:click="increaseNumber()">methods</button>
+
+        <p> {{str}} </p>
+        <p> computed: {{ reverseStr }} </p>
+        <p> methods:{{ reverseMethods() }} {{testMethods()}} </p>
+        <p>computed involved: {{involved }} </p>
+    </div>
+    <hr>
+    <!-------->
+    <div id="demo-vue-4">
+        <button v-on:click="changeText()">change text</button>
+        <div v-bind:class=" { active : isActive, 'text-danger' : hasError } ">
+            this is dynamic class
+        </div>
+    </div>
 
     <script src="vue.js"></script>
 </body>
+
 </html>
