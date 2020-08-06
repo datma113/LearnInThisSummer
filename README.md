@@ -1,2 +1,2 @@
 # LearnInThisSummer
-this is everything i've learnt in my summer 2020
+this is everything i've learnt in summer 2020
