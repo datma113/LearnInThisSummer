@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./VueJS/vue.js"></script>
+    <link rel="stylesheet" href="Bootstrap4/bootstrap.min.css">
+    <style>
+        a {
+            color: #42b983;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div id="app">
+        <button class="btn btn-primary" @click="change">click</button>
+        <div v-if=" state === 'show' ">v-if return truthy </div>
+        <div v-else>v-else </div>
+        <template v-if="state === 'show'">
+            <h1>Title</h1>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+        </template>
+        <div v-show="show"> this is v-show</div>
+    </div>
+    <hr>
+    <h1>list rendering</h1>
+
+    <div id="app1">
+        <p> {{ title }} </p>
+        <button class="btn btn-primary" @click="addItem('new item')">add item</button>
+        <ul class="nav flex-column">
+            <li v-for=" item in list " class="nav-item">
+                <a href="#" class="nav-link"> {{item}}</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div id="app2">
+        <div @click="testPropagation('container has been clicked', event)"> 
+            <button class="btn btn-warning" @click.stop="count++">count</button>
+            <p > this button has been clicked {{ count }} times</p>
+            <a href="#" @click.stop="count++">doSomething</a>
+            <button v-on:keyup.enter="count++" class="btn btn-danger">enter</button>
+        </div>
+      
+    </div>
+    <script src="vue1.js"></script>
+</body>
+
+</html>
