@@ -1,0 +1,34 @@
+[
+    {
+        "name" : "Chau Quoc An",
+        "age" : 20,
+        "faculty" : "IT",
+        "field" : "software engineering",
+        "class" : "DHKTPM14",
+        "graduated" : false
+    },
+    {
+        "name" : "Do Tung Duong",
+        "age" : 21,
+        "faculty" : "IT",
+        "field" : "System Information",
+        "class" : "DHHTTT14",
+        "graduated" : false
+    },
+    {
+        "name" : "Le Ngoc Ton",
+        "age" : 20,
+        "faculty" : "IT",
+        "field" : "Computer Science",
+        "class" : "DHKHMT14",
+        "graduated" : false
+    },
+    {
+        "name" : "Nguyen Hoang Huy",
+        "age" : 20,
+        "faculty" : "IT",
+        "field" : "System Information",
+        "class" : "DHHTTT14",
+        "graduated" : false
+    }
+]

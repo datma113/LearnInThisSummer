@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="VueJS/vue.js"></script>
+    <link rel="stylesheet" href="Bootstrap4/bootstrap.min.css">
+    <style>
+        a{
+            color:#42b983;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div id="app">
+        <input type="text" class="form-control" v-model.lazy="msg">
+        <p> message: {{msg}} </p>
+
+        <textarea class="form-control" v-model="msgArea"></textarea>
+        <!---------------->
+        <hr>
+        <p style="white-space: pre-line;"> {{msgArea}} </p>
+        <br>
+        <div class="form-check">
+            <label class="form-check-label" style="user-select: none;">
+                <input type="checkbox" class="form-check-input" v-model="state">
+                {{ state }}
+            </label>
+        </div>
+        <!---------------->
+        <hr>
+        <div class="">
+            <div class="form-check-inline">
+                <label class="form-check-label" style="user-select: none;">
+                    <input type="checkbox" value="banana" class="form-check-input" v-model="list">
+                        banana
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label" style="user-select: none;">
+                    <input type="checkbox" value="apple" class="form-check-input" v-model="list"  >
+                        apple
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label" style="user-select: none;">
+                    <input type="checkbox" value="grape" class="form-check-input" v-model="list" >
+                        grape
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label" style="user-select: none;">
+                    <input type="checkbox" value="mango" class="form-check-input" v-model="list" >
+                        mango
+                </label>
+            </div>
+            <ul class="nav flex-column" >
+                <li v-for=" items in list " class="nav-item"> <a href="#" class="nav-link"> {{items}} </a> </li>
+            </ul>
+        </div>
+    </div>
+    <script src="vue2.js"></script>
+</body>
+
+</html>

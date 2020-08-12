@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review VueJS</title>
+    <link rel="stylesheet" href="Bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="cssForApp1.css">
+    <script src="VueJS/vue.js"></script>
+</head>
+
+<body class="container">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dicta, mollitia maxime, similique recusandae,
+        pariatur fugit magni asperiores qui hic delectus. Tempore molestias deleniti placeat vero, itaque vitae veniam
+        expedita ut fuga? Aliquam et tenetur quos commodi cupiditate, sed atque odio, quaerat modi voluptate animi at
+        eveniet cum possimus provident.</p>
+    <div id="app">
+        <button class="btn btn-outline-secondary " style="font-weight: bold;">Giỏ Hàng ({{numberInCart}}) </button>
+        <div class="row  mt-3">
+            <div class="col-lg-3 ">
+                <img v-bind:src="getItem.url" alt="Áo Cam" class="img">
+            </div>
+            <div class="col-lg-5 ml-3">
+                <p class="title"> Áo thun trơn thể thao nam vải mỏng mịn</p>
+                <p>Thương hiệu: {{tradeMark}} </p>
+                <p v-if="getItem.quantityInStock > 0">còn lại: {{getItem.quantityInStock}} sản phẩm</p>
+                <p v-else> Sản phẩm đã hết </p>
+                <p class="text-warning"> ₫ {{getFinalPrice}} </p>
+                <p class="text-secondary "> <span class="origin-price"> ₫ {{getItem.originPrice}}</span>
+                    <span class="badge badge-secondary"> -{{discount*100}} %</span>
+                </p>
+                <hr>
+                <div class="row">
+                    <div class="col-3" style="font-weight: bold;">
+                        màu sắc:
+                    </div>
+                    <div class="col-5 choose-color">
+                        <div class="color-text"> {{getItem.textColor}} </div>
+                        <div class="row">
+                            <img v-for="(item, index) in products" v-bind:src="item.url" v-bind:alt="item.altColor"
+                                class="choose-img img" @click="getIndex(index)"
+                                v-bind:class=" { 'isActive': checkSelected(index) } ">
+
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-warning text-light mt-3 "
+                    v-bind:class=" { 'bg-dark': checkItemInProducts } "
+                    v-bind:disabled="checkItemInProducts" 
+                    style="width: 200px; height: 50px;" @click="addToCart()">ADD
+                    TO CART</button>
+            </div>
+        </div>
+        <ul class="mt-3">
+            <li v-for="item in description"> {{item}} </li>
+        </ul>
+    </div>
+    <script src="appVue1.js"></script>
+</body>
+
+</html>

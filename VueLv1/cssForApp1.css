@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.img{
+    height: 275px;
+    border: thin solid #DDDDDD;
+    padding: 5px;
+    cursor: pointer;
+}
+.title{
+    font-weight: bold;
+    font-size: 30px;   
+}
+.choose-color{
+    display: flex;
+    flex-direction: column;
+
+}
+.choose-img{
+    height: 50px;
+    margin: 3px;
+    user-select: none;
+}
+.choose-img:hover{
+    border: 1px solid orangered;
+}
+.isActive{
+    border: 1px solid orangered;
+}
+.color-text{
+    margin-bottom: 10px;
+    user-select: none;
+}
+.origin-price{
+    text-decoration: line-through;
+    color: darkgrey;
+}
+.outOfStock{
+    background-color: aqua;
+}

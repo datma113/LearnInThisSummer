@@ -1,0 +1,34 @@
+[
+    {
+        "name" : "Phan Thi Tu Thi",
+        "age" : 20,
+        "faculty" : "IT",
+        "field" : "software engineering",
+        "class" : "DHKTPM14",
+        "graduated" : false
+    },
+    {
+        "name" : "Cam Giang",
+        "age" : 20,
+        "faculty" : "IT",
+        "field" : "Information Technology",
+        "class" : "DHCNTT14A",
+        "graduated" : false
+    },
+    {
+        "name" : "Nguyen Thi Ngoc Anh",
+        "age" : 20,
+        "faculty" : "IT",
+        "field" : "Information Technology",
+        "class" : "DHCNTT14A",
+        "graduated" : false
+    },
+    {
+        "name" : "Kieu Dinh Thai",
+        "age" : 20,
+        "faculty" : "IT",
+        "field" : "Information Technology",
+        "class" : "DHCNTT14A",
+        "graduated" : false
+    }
+]
