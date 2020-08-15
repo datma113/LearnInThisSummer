@@ -8,6 +8,7 @@
       v-bind:listItem="listItem"
       v-on:getRequestFromCompHeader="closeBlock"
     ></compHeader>
+    <compBody></compBody>
     <compFooter v-bind:dataToFooter="dataToFooter" v-on:changeByFooterBtn="changeText"></compFooter>
   </div>
 </template>
@@ -15,6 +16,7 @@
 <script>
 import compHeader from "./Components/compHeaders";
 import compFooter from "./Components/compFooter";
+import compBody from "./Components/compBody"
 
 export default {
   name: "app",
@@ -49,6 +51,7 @@ export default {
   components: {
     compHeader,
     compFooter,
+    compBody
   },
 };
 </script>

@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import "bootstrap/dist/css/bootstrap.css";
 import products from "./products";
 export default {
   name: "component-headers",
