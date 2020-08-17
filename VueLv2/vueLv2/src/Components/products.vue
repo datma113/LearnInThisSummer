@@ -1,12 +1,15 @@
 <template>
-  <div class="demo-products col-2 border m-1">
-    {{product.name}}
-    <button
-      class="btn btn-danger btn-demo-products"
-      @click="sendRequestToCompHeader"
-      v-bind:data-pos="pos"
-    >close</button>
-  </div>
+  
+    <div class="demo-products col-2 border m-1">
+      {{ product.name }}
+      <button
+        class="btn btn-danger btn-demo-products"
+        @click="sendRequestToCompHeader"
+        v-bind:data-pos="pos"
+      >
+        close
+      </button>
+    </div>
 </template>
 
 <script>
@@ -15,19 +18,19 @@ export default {
   props: {
     product: {
       type: Object,
-      default: {},
+      default: {}
     },
     pos: {
       type: Number,
-      default: 0,
-    },
+      default: 0
+    }
   },
   methods: {
-    sendRequestToCompHeader: function (event) {
+    sendRequestToCompHeader: function(event) {
       let data = parseInt(event.target.dataset.pos);
       this.$emit("getRequestFromProducts", data);
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <p>{{ text | upperCase}} x {{ text }}</p>
+    <p>{{ text }} x {{ text }}</p>
     <p>{{ text }} x {{ text }} </p>
-    <p>{{ text }} x {{ text| upperCase }}</p>
+    <p>{{ text }} x {{ text }}</p>
   </div>
 </template>
 

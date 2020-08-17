@@ -1,7 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
-import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.css'
+import VueRouter from 'vue-router'
+import Routers from './routers'
+
+Vue.use(VueRouter);
+const router = new VueRouter({
+    routes: Routers
+})
 
 Vue.filter('upperCase', function(value) {
     return value.toUpperCase();
@@ -9,5 +14,6 @@ Vue.filter('upperCase', function(value) {
 
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
+  router: router
 })

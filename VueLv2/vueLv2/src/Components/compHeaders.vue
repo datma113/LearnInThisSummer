@@ -1,18 +1,28 @@
 <template>
   <div>
     <h1>
-      {{text}}
+      {{ text }}
       <br />
-      {{dataToHeader}}
+      {{ dataToHeader }}
     </h1>
     <div class="row">
-      <products
-        v-for="(item, index) in listItem"
-        v-bind:key="item.id"
-        v-bind:product="item"
-        v-on:getRequestFromProducts="sendRequestToApp"
-        v-bind:pos="index"
-      />
+      <input type="text" class="form-control m-2" v-model="search" />
+      <br />
+      <div class="col-12 border" >
+        <div class="row " v-if="searchList != 0">
+          <products
+            v-for="(item, index) in searchList"
+            v-bind:key="item.id"
+            v-bind:product="item"
+            v-on:getRequestFromProducts="sendRequestToApp"
+            v-bind:pos="index"
+          />
+        </div>
+        
+        <div v-else>
+          <p class="text-danger">No Item match</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -24,26 +34,34 @@ export default {
   props: {
     dataToHeader: {
       type: String,
-      default: "default",
+      default: "default"
     },
     listItem: {
       type: Array,
-      default: [],
-    },
+      default: []
+    }
   },
   data() {
     return {
       text: "this is component header",
+      search: ""
     };
   },
   methods: {
-    sendRequestToApp: function (data) {
+    sendRequestToApp: function(data) {
       this.$emit("getRequestFromCompHeader", data);
-    },
+    }
+  },
+  computed: {
+    searchList: function() {
+      return this.listItem.filter(item => {
+        return item.name.match(this.search);
+      });
+    }
   },
   components: {
-    products,
-  },
+    products
+  }
 };
 </script>
 
