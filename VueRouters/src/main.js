@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
-import routers from './routers'
+import routes from './routers'
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    routes: routers
+    routes: routes,
+    mode: 'history'
 })
 
 new Vue({

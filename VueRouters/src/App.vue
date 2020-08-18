@@ -1,12 +1,14 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png" />
+    <compHeader></compHeader>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 //import compBody from "./components/compBody";
+import compHeader from "./components/compHeader";
 export default {
   name: "app",
   data() {
@@ -15,7 +17,8 @@ export default {
     };
   },
   components: {
- //   compBody
+    //   compBody,
+    compHeader
   }
 };
 </script>
