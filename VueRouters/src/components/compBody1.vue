@@ -1,13 +1,15 @@
 <template>
-  <h1> {{text}} </h1>
+    <div class="text-danger">
+        {{text}}
+    </div>
 </template>
 
 <script>
 export default {
     data() {
         return {
-          text: 'this is component body',
-          id: 2
+            text: '-this is component body 1',
+            id: 1
         }
     }
 }
