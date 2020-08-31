@@ -7,7 +7,6 @@
 </template>
 
 <script>
-//import compBody from "./components/compBody";
 import compHeader from "./components/compHeader";
 export default {
   name: "app",
@@ -17,7 +16,6 @@ export default {
     };
   },
   components: {
-    //   compBody,
     compHeader
   }
 };
