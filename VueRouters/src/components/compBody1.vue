@@ -8,7 +8,7 @@
 export default {
     data() {
         return {
-            text: '-this is component body 1',
+            text: '-this is component body 1zzz',
             id: 1
         }
     }
